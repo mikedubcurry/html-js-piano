@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Piano</title>
+        <style>
+            body {
+                background-color: blueviolet;
+            }
+
+            .keyboard {
+                width: fit-content;
+            }
+
+            .whitekeys {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                gap: 12px;
+                /* position: absolute; */
+            }
+
+            .blackkeys {
+                position: relative;
+                display: flex;
+                top: -126px;
+                /* grid-template-columns: repeat(6, 1fr); */
+                justify-content: space-around;
+                padding-inline: 18px;
+                /* gap: 12px; */
+                /* left: 10%; */
+            }
+
+            ._ {
+                visibility: hidden
+            }
+
+            .white {
+                position: relative;
+                z-index: 20;
+            }
+
+            .black {
+                position: relative;
+                z-index: 25;
+            }
+
+            div.pressed {
+                background-color: blue !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app"></div>
+        <script src="piano.js"></script>
+    </body>
+
+</html>
